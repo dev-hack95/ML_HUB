@@ -1,4 +1,9 @@
 //import * as tf from "@tensorflow/tfjs"
+//import * as d3 from "d3"
+
+d3.csv("./data/iris.csv").then(function(data) {
+    console.log(data)
+})
 
 const load_data =  async() => {
     const csvUrl = './data/iris.csv'
