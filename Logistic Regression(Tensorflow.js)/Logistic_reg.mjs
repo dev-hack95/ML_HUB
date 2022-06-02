@@ -1,6 +1,6 @@
 //import * as tf from "@tensorflow/tfjs"
 
-async function load_data() {
+const load_data =  async() => {
     const csvUrl = './data/iris.csv'
     const csv_data = tf.data.csv(csvUrl, {
         columnConfigs: {
@@ -70,4 +70,5 @@ async function load_data() {
 
 
 }
+
 load_data();
