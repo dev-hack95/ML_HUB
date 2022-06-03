@@ -58,8 +58,8 @@ const load_data =  async() => {
                 onEpochEnd: async (epoch, logs) => {
                     console.log("Epoch: " + epoch + "Loss: " + logs.loss);
                 }
-            },
-            callbacks: tfvis.show.fitCallbacks(surface, ['loss', 'acc'])
+            }
+            // callbacks: tfvis.show.fitCallbacks(surface, ['loss', 'acc'])   //used for showing runtime accuracy and loss graph 
         });
 
 
@@ -69,6 +69,8 @@ const load_data =  async() => {
     const pIndex = tf.argMax(prediction, axis = 1).dataSync();
 
     const classNames = ["Setosa", "Virfinica", "Versicolor"];
+    
+    tfvis.show.modelSummary(surface, model) // Model summary in tfvis
 
     test_values.print()
     prediction.print()
