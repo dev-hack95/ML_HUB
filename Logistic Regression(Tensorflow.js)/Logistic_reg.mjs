@@ -1,5 +1,6 @@
-//import * as tf from "@tensorflow/tfjs"
-//import * as d3 from "d3"
+//import * as tf from "@tensorflow/tfjs";
+//import * as d3 from "d3";
+//import * as tfvis from "@tensorflow/tf-vis";
 
 d3.csv("./data/iris.csv").then(function(data) {
     console.log(data)
@@ -47,6 +48,8 @@ const load_data =  async() => {
         loss: "categoricalCrossentropy",
         optimizer: tf.train.adam(0.01)
     });
+    
+    const surface = {name: 'show.fitCallbacks', tab: 'Training'};
 
     await model.fitDataset(convert_data,
         {
@@ -55,7 +58,8 @@ const load_data =  async() => {
                 onEpochEnd: async (epoch, logs) => {
                     console.log("Epoch: " + epoch + "Loss: " + logs.loss);
                 }
-            }
+            },
+            callbacks: tfvis.show.fitCallbacks(surface, ['loss', 'acc'])
         });
 
 
