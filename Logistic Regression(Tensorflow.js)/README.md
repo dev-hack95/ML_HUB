@@ -6,3 +6,6 @@
    2) Alternative  is Pappaparse
    3) Tensorflow.js (npm i @tensorflow/tfjs)
    4) Tensorflow visualation (npm i @tensorflow/tfjs-vis)
+
+* Outputs: @tensorflow/tf-vis
+![output](./data/Images/Screenshot(177).png)
