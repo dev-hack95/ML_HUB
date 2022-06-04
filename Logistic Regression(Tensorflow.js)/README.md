@@ -8,4 +8,4 @@
    4) Tensorflow visualation (npm i @tensorflow/tfjs-vis)
 
 * Outputs: @tensorflow/tf-vis
-![output](./data/Images/Screenshot(177).png)
+![output](./data/Images/Screenshot(175).png)
