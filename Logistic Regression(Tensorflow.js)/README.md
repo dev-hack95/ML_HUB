@@ -8,4 +8,5 @@
    4) Tensorflow visualation (npm i @tensorflow/tfjs-vis)
 
 * Outputs: @tensorflow/tf-vis
-![output](./data/Images/Screenshot(175).png)
+
+![output](https://github.com/dev-hack95/ML_HUB/blob/main/Logistic%20Regression(Tensorflow.js)/data/Images/Screenshot%20(175).png)
