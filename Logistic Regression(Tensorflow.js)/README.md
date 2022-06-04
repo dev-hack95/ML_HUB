@@ -1,7 +1,7 @@
 # Iris Prediction using tensorflow.js
 
 ![Tensorflow version](https://img.shields.io/badge/Tensorflow.js-3.18.0-lightgrey)
-![Type of ML](https://img.shields.io/badge/Type%20of%20ML-Binary%20Classification-red)
+![Type of ML](https://img.shields.io/badge/Type%20of%20ML-Multi--Classification-red)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 * Requriments
