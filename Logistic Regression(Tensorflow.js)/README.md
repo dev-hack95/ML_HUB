@@ -9,4 +9,4 @@
 
 * Outputs: @tensorflow/tf-vis
 
-![output](https://github.com/dev-hack95/ML_HUB/blob/main/Logistic%20Regression(Tensorflow.js)/data/Images/Screenshot%20(175).png)
+![output](https://github.com/dev-hack95/ML_HUB/blob/main/Logistic%20Regression(Tensorflow.js)/data/Images/Screenshot%20(177).png)
