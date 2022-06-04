@@ -1,6 +1,6 @@
 # Iris Prediction using tensorflow.js
 
-![Python version](https://img.shields.io/badge/Python%20version-3.10%2B-lightgrey)
+![Tensorflow version](https://img.shields.io/badge/Tensorflow.js-3.18.0-lightgrey)
 ![GitHub last commit](https://img.shields.io/github/last-commit/semasuka/Credit-card-approval-prediction-classification)
 ![GitHub repo size](https://img.shields.io/github/repo-size/semasuka/Credit-card-approval-prediction-classification)
 ![Type of ML](https://img.shields.io/badge/Type%20of%20ML-Binary%20Classification-red)
