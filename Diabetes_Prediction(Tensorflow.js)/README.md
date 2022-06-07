@@ -10,5 +10,5 @@
    3) Tensorflow.js (npm i @tensorflow/tfjs)
    4) Tensorflow visualation (npm i @tensorflow/tfjs-vis)
 
-* Outputs: @tensorflow/tf-vis
-![output](https://github.com/dev-hack95/ML_HUB/blob/main/Diabetes_Prediction(Tensorflow.js)/data/Screenshot%20(182).png)
+* Outputs: Prediction(@tensorflow/tf-vis)
+![output](https://github.com/dev-hack95/ML_HUB/blob/main/Diabetes_Prediction(Tensorflow.js)/data/media/test.gif)
