@@ -83,8 +83,10 @@ const load_data = async () => {
     })
 
     //await model.save('downloads://diabetes-detection');
-
+    
+    //Diabetic
     const test_value_1 = tf.tensor2d([7, 194, 68, 28, 0, 35.9, 0.745, 41], [1, 8]);
+    //Healthy
     const test_value_2 = tf.tensor2d([4, 141, 74, 0, 0, 27.6, 0.244, 40], [1, 8]);
     const prediction = model.predict(test_value_2);
     const pIndex = tf.argMax(prediction, axis = 1).dataSync();
