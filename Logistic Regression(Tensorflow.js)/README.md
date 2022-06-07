@@ -10,6 +10,6 @@
    3) Tensorflow.js (npm i @tensorflow/tfjs)
    4) Tensorflow visualation (npm i @tensorflow/tfjs-vis)
 
-* Outputs: @tensorflow/tf-vis
+* Outputs: Prediction(@tensorflow/tf-vis)
 
-![output](https://github.com/dev-hack95/ML_HUB/blob/main/Logistic%20Regression(Tensorflow.js)/data/Images/Screenshot%20(177).png)
+![output](https://github.com/dev-hack95/ML_HUB/blob/main/Logistic%20Regression(Tensorflow.js)/data/Images/logistic_reg.gif)
