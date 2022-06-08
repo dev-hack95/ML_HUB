@@ -1,16 +1,11 @@
-//import * as tf from "@tensorflow/tfjs"
-//import * as d3 from "d3"
-//import * as tfvis from "@tensorflow/tfjs-vis"
-//import * as Plotly from "plotly.js-dist-min"
+//import * as tf from "@tensorflow/tfjs";
+//import * as tfvis from "@tensorflow/tfjs-vis";
+//import * as Plotly from "plotly.js-dist-min";
+//import * as Papa from "papaparse";
 
 
-const eda = async () => {};
 
 const load_data = async () => {
-
-    d3.csv("./data/diabetes.csv").then(function (data) {
-        console.log(data);
-    });
 
     const csv = "./data/diabetes.csv"
     const csv_data = tf.data.csv(csv, {
@@ -34,15 +29,20 @@ const load_data = async () => {
             xs: Object.values(xs),
             ys: Object.values(lables)
         }
-    }).batch(10)
+    }).batch(32)
 
     const model = tf.sequential({
         layers: [
             tf.layers.dense({
-                units: 2,
-                activation: "softmax",
+                units: 9,
+                activation: "sigmoid",
                 inputShape: [Features]
+            }),
+            tf.layers.dense({
+                activation: "sigmoid",
+                units: 2
             })
+
         ]
     });
     console.log(model)
@@ -72,7 +72,7 @@ const load_data = async () => {
     const surface = {name: 'show.fitCallbacks', tab: 'Training'};
 
     await model.fitDataset(convert_data, {
-        epochs: 100,
+        epochs: 180,
         callbacks: {
             onEpochEnd: async (epoch, logs) => {
                 trainLogs.push(logs);
@@ -83,10 +83,8 @@ const load_data = async () => {
     })
 
     //await model.save('downloads://diabetes-detection');
-    
-    //Diabetic
+
     const test_value_1 = tf.tensor2d([7, 194, 68, 28, 0, 35.9, 0.745, 41], [1, 8]);
-    //Healthy
     const test_value_2 = tf.tensor2d([4, 141, 74, 0, 0, 27.6, 0.244, 40], [1, 8]);
     const prediction = model.predict(test_value_2);
     const pIndex = tf.argMax(prediction, axis = 1).dataSync();
@@ -102,6 +100,5 @@ const load_data = async () => {
 
 
 }
-
 
 load_data();
