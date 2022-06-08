@@ -34,7 +34,7 @@ const load_data = async () => {
     const model = tf.sequential({
         layers: [
             tf.layers.dense({
-                units: 9,
+                units: 8,
                 activation: "sigmoid",
                 inputShape: [Features]
             }),
