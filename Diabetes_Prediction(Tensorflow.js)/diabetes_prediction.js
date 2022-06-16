@@ -67,7 +67,7 @@ const load_data = async () => {
     const surface = {name: 'show.fitCallbacks', tab: 'Training'};
 
     await model.fitDataset(convert_data, {
-        epochs: 120,
+        epochs: 200,
         callbacks: {
             onEpochEnd: async (epoch, logs) => {
                 trainLogs.push(logs);
