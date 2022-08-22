@@ -34,10 +34,19 @@ const load_data = async () => {
     const model = tf.sequential({
         layers: [
             tf.layers.dense({
+                units: 256,
+                activation: "sigmoid",
+                inputShape: [8]
+            }),
+            tf.layers.dense({
+                units: 256,
+                activation: "sigmoid"
+            }),
+            tf.layers.dense({
                 units: 2,
-                activation: "softmax",
-                inputShape: [Features]
+                activation: "sigmoid"
             })
+
         ]
     });
     console.log(model)
