@@ -43,6 +43,10 @@ const load_data = async () => {
                 activation: "sigmoid"
             }),
             tf.layers.dense({
+                units: 256,
+                activation: "sigmoid"
+            }),
+            tf.layers.dense({
                 units: 2,
                 activation: "sigmoid"
             })
@@ -76,7 +80,7 @@ const load_data = async () => {
     const surface = {name: 'show.fitCallbacks', tab: 'Training'};
 
     await model.fitDataset(convert_data, {
-        epochs: 500,
+        epochs: 200,
         callbacks: {
             onEpochEnd: async (epoch, logs) => {
                 trainLogs.push(logs);
